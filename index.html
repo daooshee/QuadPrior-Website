@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>QuadPrior</title>
+  <link rel="icon" type="image/x-icon" href="static/images/logo-Q.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+<div class="hero-body">
+<div class="container is-max-desktop">
+<div class="columns is-centered">
+<div class="column has-text-centered">
+  <h1 class="title is-1 publication-title">Zero-Reference Low-Light Enhancement via Physical Quadruple Priors</h1>
+  <div class="is-size-5 publication-authors">
+    <!-- Paper authors -->
+    <span class="author-block">
+      <a href="https://daooshee.github.io/website/" target="_blank">Wenjing Wang</a>,</span>
+      <span class="author-block">
+        <a href="https://hyang0511.github.io/" target="_blank">Huan Yang</a>,</span>
+      <span class="author-block">
+        <a href="https://www.microsoft.com/en-us/research/people/jianf/" target="_blank">Jianlong Fu</a>,</span>
+      <span class="author-block">
+        <a href="http://www.wict.pku.edu.cn/struct/people/liujiaying.html" target="_blank">Jiaying Liu</a>
+      </span>
+  </div>
+
+  <div class="is-size-5 publication-authors">
+    <span class="author-block">CVPR-2024</span>
+  </div>
+
+  <div class="column has-text-centered">
+    <div class="publication-links">
+      <!-- Arxiv PDF link -->
+      <span class="link-block">
+        <a href="" target="_blank"
+        class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fas fa-file-pdf"></i>
+        </span>
+        <span>Paper</span>
+      </a>
+    </span>
+
+      <!-- Supplementary PDF link -->
+      <span class="link-block">
+        <a href="" target="_blank"
+        class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fas fa-file-pdf"></i>
+        </span>
+        <span>Supplementary</span>
+      </a>
+    </span>
+
+      <!-- Github link -->
+      <span class="link-block">
+        <a href="https://github.com/daooshee/QuadPrior/" target="_blank"
+        class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
+        <span>Code</span>
+      </a>
+    </span>
+
+      <!-- ArXiv abstract Link -->
+      <span class="link-block">
+        <a href="" target="_blank"
+        class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="ai ai-arxiv"></i>
+        </span>
+        <span>arXiv</span>
+      </a>
+    </span>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Understanding illumination and reducing the need for supervision pose a significant challenge in low-light enhancement. Current approaches are highly sensitive to data usage during training and illumination-specific hyper-parameters, limiting their ability to handle unseen scenarios. In this paper, we propose a new <b>zero-reference low-light enhancement framework trainable solely with normal light images</b>. To accomplish this, we devise an illumination-invariant prior inspired by the theory of physical light transfer. This prior serves as the bridge between normal and low-light images. Then, we develop a prior-to-image framework trained without low-light data. During testing, this framework is able to restore our illumination-invariant prior back to images, automatically achieving low-light enhancement. Within this framework, we leverage a pretrained generative diffusion model for model ability, introduce a bypass decoder to handle detail distortion, as well as offer a lightweight version for practicality. Extensive experiments demonstrate our framework's superiority in various scenarios as well as good interpretability, robustness, and efficiency.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Framework -->
+<section class="hero is-small" style="padding-top: 50px; padding-bottom: 50px;">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+
+          <div style="width: 45%; float:left;">
+            <h2 class="title is-3">Overview</h2>
+            <p>
+              The overall methodology of our approach is shown on the right.
+              <br> <br>
+              Our model is trained to reconstruct images from an illumination-invariant prior (the physical quadruple prior) in the normal light domain.
+              During testing, the model extracts illumination-invariant priors from low-light images and reconstructs them into normal light images.
+            </p>
+          </div>
+
+          <div style="width: 50%; float:right;">
+            <img src="static/images/Overall.jpg" alt="OVERALL"/>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+<!-- End Framework -->
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p><b>Highlights:</b></p>
+
+          <ul>
+            <li>We present a <b>zero-reference low-light enhancement</b> model that utilizes an illumination-invariant prior as the intermediary between different illumination. Our model exhibits superior performance in various under-lit scenarios <b>without relying on any specific low-light data</b>.</li>
+            <li>We establish the physical quadruple prior, a novel <b>learnable illumination-invariant prior</b> derived from a light transfer theory. This prior captures the essence of imaging under diverse lighting conditions, freeing low-light enhancement from dependence on reference samples or artificially set hyper-parameters.</li>
+            <li>We develop an effective prior-to-image mapping system by incorporating the <b>prior as a condition to control a pretrained large-scale generative diffusion model</b>. We introduce a bypass decoder to address the distortion issue, and show that our model can be distilled into a lightweight version for practical application.</li>
+          </ul>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Framework -->
+<section class="hero is-small" style="padding-top: 50px;padding-bottom: 50px;">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <div style="padding-bottom: 10px;">
+            <img src="static/images/Framework.jpg" alt="FRAMEWORK"/>
+          </div>
+          <p>
+            <b>Framework:</b> Our illumination-invariant prior and the training process for our prior-to-image model framework. We start by predicting the physical quadruple prior from the input image I. During the training phase, the model dynamically learns the linear mapping W and the layers for predicting the scale σ. In the process of reconstructing priors into images, a static SD encoder extracts the latent representation z<sub>0</sub> from the input image I. Following this, we sample noisy latent z<sub>t</sub> based on z<sub>0</sub>. Finally, the physical quadruple prior is encoded by convolutional and transformer modules, and is then merged with a frozen SD U-net to predict both noise ϵ and z<sub>0</sub>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</section>
+<!-- End Framework -->
+
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <h2 class="title is-3">Experimental Results</h2>
+
+          <img src="static/images/Table.jpg" width="100%" alt="Experiments" style="padding-top: 10px;"/>
+          <p>
+            Our model surpasses the majority of unsupervised techniques and notably reduces the performance gap compared to supervised methods.
+          </p>
+
+          <img src="static/images/Comp_Fig.jpg" width="100%" alt="Experiments" style="padding-top: 20px;"/>
+          <p>
+            Example low-light enhancement results on the MIT-Adobe FiveK (top row) and LOL datasets (bottom row). Our model is able to more effectively suppress noise and prevent overexposure or excessive darkness.
+          </p>
+
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+
+
+
+
+
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@misc{quadprior,
+    title={Zero-Reference Low-Light Enhancement via Physical Quadruple Priors}, 
+    author={Wenjing Wang and Huan Yang and Jianlong Fu and Jiaying Liu},
+    booktitle={IEEE conference on computer vision and pattern recognition (CVPR)}
+    year={2024},
+  }</code></pre>
+  <p> If you have any questions, please contact Wenjing Wang (daooshee@pku.edu.cn). </p>
+    </div>
+
+</section>
+<!--End BibTex citation -->
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+</html>
